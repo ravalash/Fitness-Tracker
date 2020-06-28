@@ -2,7 +2,7 @@ let mongoose = require("mongoose");
 let db = require("../models");
 require("dotenv").config();
 
-mongoose.connect(process.env.DB_HOST, {
+mongoose.connect(process.env.MONGODB_URI || process.env.DB_HOST, {
   useNewUrlParser: true,
   useFindAndModify: false
 });
