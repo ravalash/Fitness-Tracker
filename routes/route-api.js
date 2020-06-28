@@ -60,7 +60,7 @@ router.get("/api/workouts", (req, res) => {
 //Get all workouts sorted by day descending.
 router.get("/api/workouts/range", (req, res) => {
   Workout.find({})
-    .sort({ date: -1 })
+    .sort({ day: -1 })
     .then((result) => {
       res.json(result);
     })
