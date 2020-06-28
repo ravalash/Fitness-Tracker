@@ -2,6 +2,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
+const path = require("path");
 
 //Set port for development and production
 const PORT = process.env.PORT || 3000;
@@ -20,7 +21,7 @@ mongoose.connect(process.env.MONGODB_URI || process.env.DB_HOST, {
 });
 
 // Require routes
-app.use(require("./routes/route-api.js"));
+app.use(require(path.join(__dirname, "./routes/route-api.js")));
 
 
 //Start server
