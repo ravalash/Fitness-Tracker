@@ -1,6 +1,6 @@
 let mongoose = require("mongoose");
 const path = require("path");
-let db = require(path.join(__dirname, "../models") );
+let db = require(path.join(__dirname, "../models/") );
 require("dotenv").config();
 
 mongoose.connect(process.env.MONGODB_URI || process.env.DB_HOST, {

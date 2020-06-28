@@ -1,7 +1,7 @@
 //Require express router, Workout model, and path
 const router = require("express").Router();
-const Workout = require("../models/workout.js");
 const path = require("path");
+const Workout = require(path.join(__dirname, "../models/workout.js"));
 
 //Serve exercise.html to /exercise route
 router.get("/exercise", (req, res) => {
